@@ -1,0 +1,14 @@
+name: VoiceToLocalChat
+version: 0.1.0-dev
+main: com.divinitysmp.voicetolocalchat.VoiceToLocalChat
+api-version: '26.2'
+depend: [voicechat, SimpleGlobChat]
+softdepend: [PronounHover, DiscordSRV]
+commands:
+  voicetext:
+    aliases: [vt]
+    description: Opt in or out of local voice transcription
+    usage: /vt <on|off|status|help>
+permissions:
+  voicetolocalchat.use:
+    default: true

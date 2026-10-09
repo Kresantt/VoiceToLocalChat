@@ -1,0 +1,24 @@
+# VoiceToLocalChat: conservative defaults for 20 GB RAM / 30-50 online players.
+# DEVELOPMENT SCAFFOLD ONLY: speech recognition is not implemented yet.
+transcription:
+  enabled: false
+  require-player-opt-in: true
+  default-player-enabled: false
+  engine: vosk
+  model-path: models/vosk-model-small-en-us-0.15
+  language: en-us
+performance:
+  max-concurrent-transcriptions: 2
+  max-opted-in-players: 10
+  recognition-threads: 2
+  max-queued-segments: 20
+  max-audio-duration-ms: 5000
+  skip-disabled-players: true
+  voice-activity-detection: true
+  discard-queued-audio-on-disable: true
+  retain-raw-audio: false
+local-chat:
+  use-simpleglobchat-radius: true
+  allow-global: false
+  allow-discord: false
+  format: '&a[Voice] &f%player%&7: &f%message%'
